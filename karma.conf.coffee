@@ -15,8 +15,8 @@ module.exports = (config) ->
 
     # list of files / patterns to load in the browser
     files: [
-      "vendor/assets/javascripts/angular/angular.js"
-      "vendor/assets/javascripts/angular/angular-mocks.js"
+      "gems/assets/javascripts/angular/angular.js"
+      "gems/assets/javascripts/angular/angular-mocks.js"
       "vendor/assets/javascripts/require/require.js"
       'lib/assets/javascripts/app.js.coffee'
       'test/**/*Spec.js.coffee'

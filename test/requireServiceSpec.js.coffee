@@ -4,6 +4,7 @@ describe "Loading the module", () ->
   it "should load the module", () ->
     inject (lazyRequire) ->
       expect(lazyRequire).not.toBe(null)
+
 describe "loading libraries", ->
   lazyRequire = success = null
   beforeEach ->
@@ -29,3 +30,20 @@ describe "loading libraries", ->
       waits(500)
       runs () ->
         expect(success).toBe(false)
+
+describe "aliasing", ->
+  lazyRequire = success = null
+  beforeEach ->
+    success = null
+    module 'Required'
+    inject ($injector) ->
+      lazyRequire = $injector.get 'lazyRequire'
+  describe "when alias is configured", ->
+    it "resolves", ->
+      expect(success).toBe(null)
+      runs () ->
+        lazyRequire.load('jquery').then ->
+          success = true
+      waits(500)
+      runs () ->
+        expect(success).toBe(true)

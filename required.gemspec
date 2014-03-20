@@ -26,6 +26,5 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency "railties",        "~> 3.1"
   spec.add_runtime_dependency "angularjs-rails", ">= 1.0.8"
-  spec.add_runtime_dependency "requirejs-rails", "~> 0.9.1"
 
 end
