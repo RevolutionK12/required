@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "jeweler"
   spec.add_development_dependency 'jasmine-jquery-rails'
+  spec.add_development_dependency 'geminabox'
 
   spec.add_runtime_dependency "railties",        "~> 3.1"
   spec.add_runtime_dependency "angularjs-rails", ">= 1.0.8"
