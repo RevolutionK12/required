@@ -1,6 +1,6 @@
 app = angular.module "Required", []
 app.factory "lazyRequire", ['$q', '$rootScope', ($q, $rootScope) ->
-  service = 
+  service =
     load: (library) ->
       deferred = $q.defer()
       require([library], () ->
